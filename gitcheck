@@ -1,2 +1,7 @@
-echo "hai"
-echo "this is another line iam adding into git"
+#!/bin/bash
+NUMBER= $1
+if [ $nymber -gt 20 ]
+then 
+   echo "given number is greater than 20"
+else 
+   echo "given number is not greater than 20 "
