@@ -1,5 +1,5 @@
 #!/bin/bash
-Id=$(id -u)
+ID=$(id -u)
 VALIDATE(){
     if [ $? -ne 0 ]
     then 
@@ -9,6 +9,7 @@ VALIDATE(){
         echo "instalaltion success"
     fi
 }
+
  if [ $ID  -ne  0  ]
 then
     echo "go with root user"
