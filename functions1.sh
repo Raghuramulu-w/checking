@@ -1,6 +1,6 @@
 #!/bin/bash
 Id=$(id -u 0)
-VALIDATE(){
+VALIDATE() {
     if [ $? -ne 0 ]
     then 
         echo "installation failed "
