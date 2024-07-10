@@ -7,7 +7,7 @@ if [ $ID -ne 0 ]
     else
         echo "you are root user"
 fi
-yum install mysql -y
+yum install mysqlll -y
 if [ $? -ne 0 ]
     then 
         echo "installation fail for mysql"
