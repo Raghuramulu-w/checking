@@ -9,10 +9,10 @@ VALIDATE() {
         echo "instalaltion success"
     fi
 }
-if [ $ID -ne 0 ]
+ if [ $ID -ne 0 ]
 then
     echo "go with root user"
-    exit 1
+    
 else
     echo "you are root user"
 fi
