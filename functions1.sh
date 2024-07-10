@@ -12,11 +12,11 @@ VALIDATE(){
 if [ $ID -ne 0 ]
 then
     echo "go with root user"
-    exit1
+    exit 1
 else
     echo "you are root user"
 fi
-yum install mysql -y
+yum install mysql1 -y
 VALIDATE
 
 yum install git -y
