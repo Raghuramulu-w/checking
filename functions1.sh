@@ -4,7 +4,7 @@ VALIDATE(){
     if [ $? -ne 0 ]
     then 
         echo "installation failed "
-        exit 1
+        
     else
         echo "instalaltion success"
     fi
