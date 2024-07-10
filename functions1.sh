@@ -1,5 +1,5 @@
 #!/bin/bash
-Id=$(id -u 0)
+Id=$(id -u)
 VALIDATE() {
     if [ $? -ne 0 ]
     then 
