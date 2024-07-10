@@ -19,5 +19,5 @@ fi
 yum install mysql1 -y
 VALIDATE
 
-yum install git -y
+yum install gitt -y
 VALIDATE
