@@ -1,7 +1,9 @@
 #!/bin/bash
 ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
-echo "$TIMESTAMP"
+#echo "$TIMESTAMP"
+LOGFILE="/tmp/$0 -$TIMESTAMP.log"
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
@@ -17,7 +19,7 @@ then
 else
     echo "you are root user welcome"
 fi
-    yum install mysql -y
+    yum install mysql -y >>LOGFILE
     VALIDATE $? "my sql installation"
     yum install git -y
     VALIDATE $? "my git installation"
