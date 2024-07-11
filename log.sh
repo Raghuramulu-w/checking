@@ -10,7 +10,7 @@ N="\e[0m"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
-        echo -e "$R ERROR : $2 fail $N"
+        echo -e "$R ERROR : $2  $N fail $N"
     else
         echo "$2 success"
     fi
