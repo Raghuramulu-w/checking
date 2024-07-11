@@ -8,7 +8,7 @@ VALIDATE(){
         echo "$2 success"
     fi
 }
-if [$ID -ne 0]
+if [ $ID -ne 0 ]
 then 
     echo "proceed with root user"
     exit 1
