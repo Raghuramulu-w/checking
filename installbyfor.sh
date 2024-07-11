@@ -9,9 +9,9 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 VALIDATE(){
   if [ $1 -ne 0 ]
   then 
-    echo -e " $R ERROR $2   failed "
+    echo -e " $R ERROR $2 $package failed "
   else
-    echo -e " $2  $G success  "
+    echo -e " $2 $package is $G success  "
   fi
 }
 if [ $ID -ne 0 ]
@@ -29,7 +29,7 @@ do
      yum install $package &>> $LOGFILE
      VALIDATE $? "MY INSTALLATION $PACKAGE "
      else
-     echo "pacckage is already installed  SKIPPING" 
+     echo "$package is already installed  SKIPPING" 
      #VALIDATE $? "my installation $package "
      fi
 
