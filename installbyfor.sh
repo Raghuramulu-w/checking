@@ -9,9 +9,9 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 VALIDATE(){
   if [ $1 -ne 0 ]
   then 
-    echo -e " ERROR $2  \e[31m failed "
+    echo -e " $R ERROR $2   failed "
   else
-    echo -e " $2  \e[32m success \e[0m "
+    echo -e " $2  $G success  "
   fi
 }
 if [ $ID -ne 0 ]
