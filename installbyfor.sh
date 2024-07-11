@@ -4,6 +4,8 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+TIMESTAMP=$(date +%F-%H-%S-%M)
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 VALIDATE(){
   if [ $1 -ne 0 ]
   then 
@@ -24,7 +26,7 @@ do
     yum list installed $package
     if [ $? -ne 0 ]
      then 
-     yum install $package
+     yum install $package &>> $LOGFILE
      VALIDATE $? "MY INSTALLATION $PACKAGE "
      else
      echo "pacckage is already installed "
