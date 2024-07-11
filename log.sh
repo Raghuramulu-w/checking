@@ -15,5 +15,5 @@ then
 else
     echo "you are root user welcome"
 fi
-    yum install mysqll -y
-    VALIDATE $? "my installation"
+    yum install mysql -y
+    VALIDATE $? "my sql installation"
