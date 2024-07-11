@@ -29,7 +29,7 @@ do
      yum install $package &>> $LOGFILE
      VALIDATE $? "MY INSTALLATION $PACKAGE "
      else
-     echo " $Y $package is already installed  SKIPPING" 
+     echo -e " $Y $package is already installed  SKIPPING" 
      #VALIDATE $? "my installation $package "
      fi
 
