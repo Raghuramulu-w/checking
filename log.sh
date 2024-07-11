@@ -1,11 +1,11 @@
 #!/bin/bash
 ID=$(id -u)
 VALIDATE(){
-    if [$? -ne 0 ]
+    if [$1 -ne 0 ]
     then 
-        echo "ERROR : installation fail"
+        echo "ERROR : $2 fail"
     else
-        echo "installation success"
+        echo "$2 success"
     fi
 }
 if [$ID -ne 0]
