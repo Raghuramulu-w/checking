@@ -22,7 +22,7 @@ then
 else
     echo "you are root user welcome"
 fi
-    yum install mysqll -y &>> $LOGFILE
+    yum install mysql -y &>> $LOGFILE
     VALIDATE $? "my sql installation"
     yum install git -y &>> $LOGFILE
     VALIDATE $? "my git installation"
