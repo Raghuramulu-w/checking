@@ -21,5 +21,5 @@ else
 fi
     yum install mysql -y &>>LOGFILE
     VALIDATE $? "my sql installation"
-    yum install git -y
+    yum install git -y &>>LOGFILE
     VALIDATE $? "my git installation"
