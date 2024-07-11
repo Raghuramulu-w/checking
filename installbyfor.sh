@@ -4,6 +4,14 @@ R="e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
+VALIDATE(){
+  IF [ $1 -ne 0 ]
+  then 
+    echo " ERROR $2 \e[31m failed "
+  else
+    echo " $2 \e[32m success \e[0m "
+  fi
+}
 if [ $ID -ne 0 ]
     then 
       echo "do with root user"
@@ -12,13 +20,14 @@ if [ $ID -ne 0 ]
 fi
 for package in $@
 do
-    if [ $package -ne 0 ]
-    then
-         yum install $package -y
-       else
-        echo "package is success"
-    fi  
-    done
+    yum list installed $package
+    if [ $? -ne 0 ]
+     then 
+     yum install $package
+     VALIDATE $? "MY INSTALLATION $PACKAGE "
+     else
+     echo "pacckage is already installed "
+     fi
 
 done
 
