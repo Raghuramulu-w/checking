@@ -10,7 +10,7 @@ if [ $ID -ne 0 ]
     else 
       echo "you are root user"
 fi
-for package in $?
+for package in $@
 do
     if [ $package -ne 0 ]
     then
