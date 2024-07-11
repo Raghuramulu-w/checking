@@ -5,7 +5,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 VALIDATE(){
-  IF [ $1 -ne 0 ]
+  if [ $1 -ne 0 ]
   then 
     echo " ERROR $2 \e[31m failed "
   else
