@@ -12,7 +12,7 @@ if [ $ID -ne 0 ]
 fi
 for package in $?
 do
-    if [$package -ne 0]
+    if [ $package -ne 0 ]
     then
          yum install $package -y
        else
