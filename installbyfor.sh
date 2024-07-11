@@ -27,7 +27,7 @@ do
     if [ $? -ne 0 ]
      then 
      yum install $package &>> $LOGFILE
-     VALIDATE $? "MY INSTALLATION $PACKAGE "
+     VALIDATE $? "MY INSTALLATION  "
      else
      echo -e " $Y $package is already installed  SKIPPING" 
      #VALIDATE $? "my installation $package "
