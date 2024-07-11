@@ -18,6 +18,7 @@ do
        else
         echo "package is success"
     fi  
+    done
 
 done
 
